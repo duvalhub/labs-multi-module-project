@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ServiceLoader;
 
-public class AppTest {
+public class ModulesTest {
 
     @Test
     public void test_1() {
