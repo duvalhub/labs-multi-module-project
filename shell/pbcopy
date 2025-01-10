@@ -1,0 +1,368 @@
+\
+	cd .. ;\
+	mvn clean install test ;\
+	nom_de_la_fonction ;\
+	cd - ;\
+	last
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] module-spi                                                         [jar]
+[INFO] module-impl1                                                       [jar]
+[INFO] module-impl2                                                       [jar]
+[INFO] module-app                                                         [jar]
+[INFO] multi-module-project                                               [pom]
+[INFO] 
+[INFO] ------------------< com.acme.multimodule:module-spi >-------------------
+[INFO] Building module-spi 1.0-SNAPSHOT                                   [1/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ module-spi ---
+[INFO] Deleting /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-spi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-spi ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-spi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-spi ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-spi ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ module-spi ---
+[INFO] Building jar: /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/target/module-spi-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ module-spi ---
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/target/module-spi-1.0-SNAPSHOT.jar to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-spi/1.0-SNAPSHOT/module-spi-1.0-SNAPSHOT.jar
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/pom.xml to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-spi/1.0-SNAPSHOT/module-spi-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-spi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-spi ---
+[INFO] Nothing to compile - all classes are up to date.
+[WARNING] Overwriting artifact's file from /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/target/module-spi-1.0-SNAPSHOT.jar to /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-spi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_spi/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-spi ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-spi ---
+[INFO] No tests to run.
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] -----------------< com.acme.multimodule:module-impl1 >------------------
+[INFO] Building module-impl1 1.0-SNAPSHOT                                 [2/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ module-impl1 ---
+[INFO] Deleting /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-impl1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-impl1 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 21 module-path] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-impl1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-impl1 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21 module-path] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-impl1 ---
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ module-impl1 ---
+[INFO] Building jar: /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/target/module-impl1-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ module-impl1 ---
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/target/module-impl1-1.0-SNAPSHOT.jar to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-impl1/1.0-SNAPSHOT/module-impl1-1.0-SNAPSHOT.jar
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/pom.xml to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-impl1/1.0-SNAPSHOT/module-impl1-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-impl1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-impl1 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 21 module-path] to target/classes
+[WARNING] Overwriting artifact's file from /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/target/module-impl1-1.0-SNAPSHOT.jar to /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-impl1 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl1/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-impl1 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21 module-path] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-impl1 ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] -----------------< com.acme.multimodule:module-impl2 >------------------
+[INFO] Building module-impl2 1.0-SNAPSHOT                                 [3/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ module-impl2 ---
+[INFO] Deleting /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-impl2 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-impl2 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 21 module-path] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-impl2 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-impl2 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-impl2 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ module-impl2 ---
+[INFO] Building jar: /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/target/module-impl2-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ module-impl2 ---
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/target/module-impl2-1.0-SNAPSHOT.jar to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-impl2/1.0-SNAPSHOT/module-impl2-1.0-SNAPSHOT.jar
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/pom.xml to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-impl2/1.0-SNAPSHOT/module-impl2-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-impl2 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-impl2 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 21 module-path] to target/classes
+[WARNING] Overwriting artifact's file from /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/target/module-impl2-1.0-SNAPSHOT.jar to /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-impl2 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_impl2/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-impl2 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-impl2 ---
+[INFO] No tests to run.
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] ------------------< com.acme.multimodule:module-app >-------------------
+[INFO] Building module-app 1.0-SNAPSHOT                                   [4/5]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ module-app ---
+[INFO] Deleting /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21 module-path] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21 module-path] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-app ---
+[INFO] Surefire report directory: /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.acme.multimodule.app.ModulesTest
+Impl_un doing something
+Impl_deux doing something
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ module-app ---
+[INFO] Building jar: /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/target/module-app-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ module-app ---
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/target/module-app-1.0-SNAPSHOT.jar to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-app/1.0-SNAPSHOT/module-app-1.0-SNAPSHOT.jar
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/pom.xml to /Users/philippeduval/.m2/repository/com/acme/multimodule/module-app/1.0-SNAPSHOT/module-app-1.0-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ module-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ module-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21 module-path] to target/classes
+[WARNING] Overwriting artifact's file from /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/target/module-app-1.0-SNAPSHOT.jar to /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ module-app ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/philippeduval/Documents/IdeaProjects/multi-module-project/module_app/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:testCompile (default-testCompile) @ module-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21 module-path] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ module-app ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO] 
+[INFO] -------------< com.acme.multimodule:multi-module-project >--------------
+[INFO] Building multi-module-project 1.0-SNAPSHOT                         [5/5]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ multi-module-project ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ multi-module-project ---
+[INFO] Installing /Users/philippeduval/Documents/IdeaProjects/multi-module-project/pom.xml to /Users/philippeduval/.m2/repository/com/acme/multimodule/multi-module-project/1.0-SNAPSHOT/multi-module-project-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for multi-module-project 1.0-SNAPSHOT:
+[INFO] 
+[INFO] module-spi ......................................... SUCCESS [  1.183 s]
+[INFO] module-impl1 ....................................... SUCCESS [  0.371 s]
+[INFO] module-impl2 ....................................... SUCCESS [  0.182 s]
+[INFO] module-app ......................................... SUCCESS [  0.639 s]
+[INFO] multi-module-project ............................... SUCCESS [  0.016 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.513 s
+[INFO] Finished at: 2025-01-09T18:20:43-05:00
+[INFO] ------------------------------------------------------------------------
+/Users/philippeduval/Documents/IdeaProjects/multi-module-project/shell
+philippeduval ttys016                         Thu Jan  9 15:00   still logged in
+philippeduval ttys015                         Mon Dec 30 05:12   still logged in
+philippeduval ttys014                         Mon Dec 30 05:09   still logged in
+philippeduval ttys011                         Tue Dec 24 10:04   still logged in
+philippeduval ttys010                         Tue Dec 24 10:04   still logged in
+philippeduval ttys009                         Tue Dec 24 10:04   still logged in
+philippeduval ttys008                         Tue Dec 24 10:04   still logged in
+philippeduval ttys007                         Tue Dec 24 10:04   still logged in
+philippeduval ttys006                         Tue Dec 24 10:04   still logged in
+philippeduval ttys005                         Tue Dec 24 10:04   still logged in
+philippeduval ttys004                         Tue Dec 24 10:04   still logged in
+philippeduval ttys003                         Tue Dec 24 10:04   still logged in
+philippeduval ttys002                         Tue Dec 24 10:04   still logged in
+philippeduval ttys001                         Tue Dec 24 10:04   still logged in
+philippeduval ttys000                         Tue Dec 24 10:04   still logged in
+philippeduval console                         Tue Dec 24 10:03   still logged in
+philippeduval ttys011                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys010                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys009                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys008                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys007                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys006                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys005                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys004                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys003                         Fri Dec 13 11:46 - 10:04 (10+22:18)
+philippeduval ttys002                         Fri Dec 13 11:45 - 10:04 (10+22:18)
+philippeduval ttys001                         Fri Dec 13 11:45 - 10:04 (10+22:18)
+philippeduval ttys000                         Fri Dec 13 11:45 - 10:04 (10+22:18)
+philippeduval console                         Fri Dec 13 11:45 - 10:03 (10+22:18)
+philippeduval ttys016                         Sun Nov 24 20:21 - 20:21  (00:00)
+philippeduval ttys013                         Fri Nov 22 03:40   still logged in
+philippeduval ttys012                         Fri Nov 22 03:40   still logged in
+philippeduval ttys011                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys010                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys009                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys008                         Fri Nov 22 03:40 - 03:40  (00:00)
+philippeduval ttys007                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys006                         Fri Nov 22 03:40 - 03:40  (00:00)
+philippeduval ttys005                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys004                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys003                         Fri Nov 22 03:40 - 11:46 (21+08:05)
+philippeduval ttys002                         Fri Nov 22 03:40 - 11:45 (21+08:05)
+philippeduval ttys001                         Fri Nov 22 03:40 - 11:45 (21+08:05)
+philippeduval ttys000                         Fri Nov 22 03:40 - 11:45 (21+08:05)
+philippeduval console                         Fri Nov 22 03:29 - 11:45 (21+08:15)
+reboot time                                Fri Nov 22 03:29
+shutdown time                              Fri Nov 22 03:22
+root       console                         Fri Nov 22 03:21 - shutdown  (00:00)
+philippeduval ttys013                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys012                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys011                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys010                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys009                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys008                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys007                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys006                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys005                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys004                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys003                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys002                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys001                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval ttys000                         Tue Nov 12 16:44 - 16:44  (00:00)
+philippeduval console                         Tue Nov 12 16:44 - 03:21 (9+10:37)
+reboot time                                Tue Nov 12 16:44
+shutdown time                              Tue Nov 12 16:33
+philippeduval ttys025                         Mon Nov 11 18:01 - 18:01  (00:00)
+philippeduval ttys024                         Mon Nov 11 17:58 - 17:58  (00:00)
+philippeduval ttys023                         Mon Nov 11 17:53 - 17:53  (00:00)
+philippeduval ttys022                         Mon Nov 11 17:40 - 17:40  (00:00)
+philippeduval ttys021                         Mon Nov 11 16:59 - 16:59  (00:00)
+philippeduval ttys019                         Mon Nov  4 14:51 - 14:51  (00:00)
+philippeduval ttys018                         Wed Oct 30 23:54 - 23:54  (00:00)
+philippeduval ttys018                         Wed Oct 30 23:26 - 23:26  (00:00)
+philippeduval ttys017                         Wed Oct 30 23:21 - 23:21  (00:00)
+philippeduval ttys016                         Wed Oct 30 22:47 - 22:47  (00:00)
+philippeduval ttys015                         Wed Oct 30 22:42 - 22:42  (00:00)
+philippeduval ttys012                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys011                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys010                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys009                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys008                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys007                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys006                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys005                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys004                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys003                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys002                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys001                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval ttys000                         Fri Oct 18 02:40 - 02:40  (00:00)
+philippeduval console                         Fri Oct 18 02:40 - 16:33 (25+14:52)
+philippeduval ttys015                         Fri Oct 18 01:20 - 22:42 (12+21:22)
+philippeduval ttys014                         Fri Oct 18 01:20 - shutdown (25+16:12)
+philippeduval ttys014                         Sat Oct 12 18:22 - 18:22  (00:00)
+philippeduval ttys013                         Sat Oct 12 18:21 - shutdown (30+23:11)
+philippeduval ttys012                         Sat Oct 12 17:21 - 02:40 (5+09:19)
+philippeduval ttys010                         Thu Oct 10 20:26 - 02:40 (7+06:14)
+philippeduval ttys007                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys006                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys005                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys004                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys003                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys002                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys001                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval ttys000                         Wed Oct  9 15:09 - 02:40 (8+11:31)
+philippeduval console                         Wed Oct  9 14:58 - 02:40 (8+11:41)
+reboot time                                Wed Oct  9 14:57
+
+wtmp begins Wed Oct  9 14:57:54 EDT 2024

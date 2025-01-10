@@ -1,6 +1,6 @@
-module com.acme.multimodule.module_impl_deux {
+module com.acme.multimodule.JPMS.ImplDeux {
 
-    requires com.acme.multimodule.module_spi;
+    requires com.acme.multimodule.JPMS.Spi;
 
     exports com.acme.multimodule.impl2;
 

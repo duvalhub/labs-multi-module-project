@@ -1,3 +1,3 @@
-module com.acme.multimodule.module_spi {
+module com.acme.multimodule.JPMS.Spi {
     exports com.acme.multimodule.spi;
 }

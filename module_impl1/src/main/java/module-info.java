@@ -1,6 +1,6 @@
-module com.acme.multimodule.module_impl_un {
+module com.acme.multimodule.JPMS..ImplUn {
 
-    requires com.acme.multimodule.module_spi;
+    requires com.acme.multimodule.JPMS.Spi;
 
     exports com.acme.multimodule.impl1;
 

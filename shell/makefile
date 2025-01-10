@@ -1,3 +1,24 @@
+
+define nom_de_la_fonction
+	echo '**** I m being called. ****' $(1)
+endef
+
+define end_of_life
+	echo '**** END OF LIFE ****'
+endef
+
+full-toute : ;\
+	cd .. ;\
+	mvn clean install test ;\
+	$(call nom_de_la_fonction, 'mon_programme') ;\
+	cd - ;\
+	$(call end_of_life)
+
+list : ;\
+    grep -e '^[^#[:space:]].*:' makefile
+
+
+#### #### #### #### #### #### #### #### #### #### ####
 #
 #
 #
@@ -40,13 +61,7 @@
 #deploy : ;\
 #	scp  target/spring-boot-jsp.war root@philippeduval.ca:./target/spring-boot-jsp.war
 #
-#list : ;\
-#    grep -e '^[^#[:space:]].*:' makefile
-#
+
 #stop : ;\
 ##	kill -HUP 9999
 #
-
-full-toute : ;\
-	mvn clean install testsh
-
