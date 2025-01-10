@@ -1,7 +1,7 @@
 module com.acme.multimodule.JPMS.App {
 
     requires com.acme.multimodule.JPMS.Spi;
-    requires com.acme.multimodule.JPMS..ImplUn;
+    requires com.acme.multimodule.JPMS.ImplUn;
     requires com.acme.multimodule.JPMS.ImplDeux;
 
     uses com.acme.multimodule.spi.API;

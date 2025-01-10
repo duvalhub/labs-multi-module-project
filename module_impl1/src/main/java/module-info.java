@@ -1,4 +1,4 @@
-module com.acme.multimodule.JPMS..ImplUn {
+module com.acme.multimodule.JPMS.ImplUn {
 
     requires com.acme.multimodule.JPMS.Spi;
 
