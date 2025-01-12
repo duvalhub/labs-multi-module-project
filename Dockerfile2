@@ -1,0 +1,64 @@
+# Utilisons une image de base qui a Maven installé
+FROM maven:3.8.4-jdk-21 AS build
+
+# Définissons le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Définir les variables d'environnement pour les répertoires
+ENV SOURCE_DIRS="./src/a ./src/b ./src/c"
+
+# Copions le pom.xml pour résoudre les dépendances
+COPY pom.xml .
+# Copier le script dans l'image
+COPY ./shell/hello_world.sh .
+# Assurer que le script est exécutable (utile si on ne peut pas l'exécuter avant la copie)
+RUN chmod +x hello_world.sh
+
+# Résolvons les dépendances (cela crée le répertoire .m2 avec toutes les dépendances)
+# Cette étape utilise le cache de Docker pour ne télécharger les dépendances que si le pom.xml a changé
+RUN mvn dependency:go-offline -B
+
+# Copions le reste de l'application
+# COPY src ./src
+# Dockerfile module_impl1 module_parent multi-module-project.iml shell
+# module_app module_impl2 module_spi pom.xml
+# COPY module_impl1 ./
+# COPY module_impl2 ./
+# COPY module_parent ./
+# COPY module_spi ./
+# COPY module_app ./
+# COPY shell ./
+# Copier les fichiers spécifiés dans les variables d'environnement
+# COPY ${SOURCE_DIRS} ./src/
+
+# Construisons l'application
+# Si vous avez besoin d'exécuter des tests, vous devriez le faire dans un environnement
+# de CI/CD séparé ou en supprimant cet argument.
+# RUN mvn package -DskipTests
+# Construire avec ces sources spécifiques
+# RUN mvn package -DskipTests -pl $(echo ${SOURCE_DIRS} | sed 's/\.\/src\///g' | sed 's/ /,/g')
+
+# Nettoyons les fichiers inutiles après le build
+# RUN rm -rf /app/src /app/pom.xml /root/.m2
+# RUN rm -rf module_impl1 module_impl2 module_parent module_spi module_app
+
+# Utilisation d'une image légère pour exécuter l'application
+# FROM eclipse-temurin:21-jre
+
+# Copions le JAR construit depuis l'étape de build précédente
+# COPY --from=build /app/target/your-app.jar /app/your-app.jar
+
+# Définissons le répertoire de travail
+WORKDIR /app
+
+# test
+COPY pom.xml .
+
+# Exposons le port si votre application utilise un port spécifique
+# EXPOSE 8080
+
+# Commande pour lancer l'application
+# CMD ["java", "-jar", "your-app.jar"]
+# Commande par défaut pour exécuter le script
+# CMD ["./hello_world.sh"]
+CMD ["echo ; echo ; echo ; ls ; echo ; echo ; echo"]

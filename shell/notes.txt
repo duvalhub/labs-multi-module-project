@@ -1,0 +1,46 @@
+ 1277  docker run --rm -it hello-world-image-2025 -c bash "echo \"hello world\""
+ 1278  docker run --rm -it hello-world-image-2025 -c bash "ls"
+ 1279  docker run --rm -it hello-world-image-2025 -c ls
+ 1280  docker run --rm -it hello-world-image-2025 -c pwd
+ 1281  docker run --rm -it hello-world-image-2025 -c "pwd ; ls"
+ 1282  docker run --rm -it hello-world-image-2025 -c "(pwd ; ls)"
+ 1283  docker run --rm -it hello-world-image-2025 -c "$(pwd ; ls)"
+ 1284  docker run --rm -it hello-world-image-2025 -c "ls"
+ 1285  docker run --rm -it hello-world-image-2025 -c "ls .."
+ 1286  docker run --rm -it ubuntu bash -c "\n  echo 'Hello';\n  ls -la;\n  echo 'World'\n"
+ 1287  docker run --rm -it hello-world-image-2025 bash -c "\n  echo 'Hello';\n  ls -la;\n  echo 'World'\n"
+ 1288  docker run --rm -it hello-world-image-2025 bash -c "\n  echo '----- Hello -----';\n  pwd ; echo ; ls -la;\n  echo '----- World -----'\n"
+ 1289  docker run --rm -it hello-world-image-2025 bash -c "\n  echo 'echo ; ----- Hello -----';\n  pwd ; echo ; ls -la;\n  echo '----- World -----' ; echo\n"
+ 1290  docker run --rm -it hello-world-image-2025 bash -c "\n  echo 'echo ; ----- Hello -----';\n  pwd ; echo ; ls -la;\n  echo '----- World -----' ; echo\n"
+ 1291  docker run --rm -it hello-world-image-2025 bash -c "\n  echo 'echo ; ----- BEGIN -----';\n  pwd ; echo ; ls -la;\n  echo '----- END -----' ; echo\n"
+ 1292  history
+
+
+
+
+ docker run -it hello-world-image-2025
+ docker build -t hello-world-image-2025 . && docker run -it hello-world-image-2025
+
+run --rm -it --entrypoint bash hello-world-image-2025
+ docker run --rm -it hello-world-image-2025 -c bash "echo hello world"
+docker run --rm -it hello-world-image-2025 -c pwd
+
+
+
+--------------------------------------------
+docker build -t hello-world-image-2025 . && \
+docker run --rm -it hello-world-image-2025 bash -c "
+   cd /app ;
+   echo 'Hello';
+   echo -n —PWD— : ; pwd ; echo -n —LS— : ; ls -la;
+   echo 'World'
+ "
+
+
+--------------------------------------------
+docker run --rm -it ubuntu bash -c "
+   echo 'Hello';
+   ls -la;
+   echo 'World'
+ "
+

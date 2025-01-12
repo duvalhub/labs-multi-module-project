@@ -20,6 +20,8 @@
         <module>module_impl1</module>
         <module>module_impl2</module>
         <module>module_app</module>
+        <module>module_ssot</module>
+        <module>module_typhon</module>
     </modules>
 
     <properties>

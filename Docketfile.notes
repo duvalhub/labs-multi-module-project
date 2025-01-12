@@ -1,0 +1,38 @@
+
+Dans le contexte des Dockerfiles, ENTRYPOINT et RUN sont deux instructions ayant des objectifs et des moments d'exécution différents dans le cycle de vie d'une image Docker. Voici une explication détaillée de chacun :
+
+ENTRYPOINT
+Définition : ENTRYPOINT spécifie le point d'entrée du conteneur, c'est-à-dire le programme ou le script qui sera exécuté lorsque le conteneur démarre. C'est l'exécutable principal autour duquel le conteneur se construit.
+Utilisation :
+ENTRYPOINT peut être spécifié de deux manières :
+Forme exec (préférée) : ENTRYPOINT ["executable", "param1", "param2"] où chaque élément est un argument séparé.
+Forme shell : ENTRYPOINT commande param1 param2 qui est exécuté via /bin/sh -c.
+Comportement :
+Si CMD est également défini, ses arguments seront ajoutés à la fin de ENTRYPOINT comme des paramètres supplémentaires.
+Les paramètres passés lors de docker run seront également ajoutés à la fin de ENTRYPOINT.
+Exemple :
+Dockerfile
+ENTRYPOINT ["/bin/echo"]
+CMD ["Hello, world!"]
+En exécutant docker run -it nom_de_l_image, vous obtiendrez "Hello, world!". Si vous faites docker run -it nom_de_l_image "Custom message", vous verrez "Custom message".
+
+RUN
+Définition : RUN exécute des commandes pendant la construction de l'image. Chaque RUN crée une nouvelle couche dans l'image avec les résultats de la commande.
+Utilisation :
+RUN peut aussi être spécifié en deux formes :
+Forme exec : RUN ["executable", "param1", "param2"]
+Forme shell : RUN commande param1 param2
+Comportement :
+Les commandes RUN sont exécutées lors de la construction de l'image et modifient l'état de l'image en cours de création.
+Les modifications faites par RUN sont persistantes dans l'image, mais ne sont pas ré-exécutées lorsque le conteneur est lancé.
+Exemple :
+Dockerfile
+RUN apt-get update && apt-get install -y python3
+Cela installe Python 3 dans l'image à la construction, mais cette commande n'est pas exécutée au démarrage du conteneur.
+
+Principales différences
+Temps d'exécution : RUN s'exécute au moment de la construction de l'image, tandis que ENTRYPOINT s'exécute au démarrage du conteneur.
+Persistance : Les changements de RUN sont permanents dans l'image, mais ENTRYPOINT définit le comportement initial du conteneur au lancement.
+Objectif : RUN est pour l'installation de logiciels, la configuration de l'environnement de l'image, tandis que ENTRYPOINT est pour spécifier comment le conteneur doit fonctionner quand il est démarré.
+
+En résumé, RUN est utilisé pour construire votre environnement dans l'image, et ENTRYPOINT pour définir ce que votre conteneur fait quand il démarre.

@@ -11,6 +11,10 @@
     <file url="file://$PROJECT_DIR$/module_impl2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/module_spi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/module_spi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module_ssot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module_ssot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module_typhon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/module_typhon/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

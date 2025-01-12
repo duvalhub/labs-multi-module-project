@@ -1,0 +1,16 @@
+# Stage de construction (build)
+FROM maven:3.8.4-jdk-21 AS build
+WORKDIR /app
+# Copie le fichier pom.xml et le code source dans le conteneur
+COPY pom.xml .
+COPY src ./src
+# Compile l'application
+RUN mvn package
+
+# Stage final (execution)
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+# Copie le jar de l'application depuis le stage 'build' vers l'image finale
+COPY --from=build /app/target/myapp.jar /app/
+# Déclare le point d'entrée pour exécuter l'application
+CMD ["java", "-jar", "myapp.jar"]
