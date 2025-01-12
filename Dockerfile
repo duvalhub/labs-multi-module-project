@@ -1,4 +1,6 @@
 # Stage de construction (build)
+########################################################################################
+
 # Utilisons une image de base qui a Maven installé
 FROM maven:3.8.4-jdk-21 AS build
 
@@ -19,6 +21,8 @@ RUN echo "00000000 00000000 00000000 Message à afficher 00000000 00000000 00000
 
 
 # Stage final (execution)
+########################################################################################
+
 #FROM eclipse-temurin:21-jre (voir : Dockerfile-ZeModel)
 
 # Utiliser une image de base. Par exemple, nous utilisons ici une image Ubuntu légère.
